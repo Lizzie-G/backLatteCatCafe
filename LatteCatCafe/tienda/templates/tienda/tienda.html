@@ -1,0 +1,74 @@
+{% extends 'core/base.html' %}
+
+{% block header %} 
+{% load static %}
+<link rel="stylesheet" href="{% static 'core/css/tienda.css' %}">
+{% endblock %}
+
+<!-- Contenido -->
+{% block content %}
+<div class="grid">
+    <section class="header">
+        <img src="{% static 'core/img/logo.jpeg' %}" alt="Imagen del logo del establecimiento Latte Cat Cafe">
+        <h1 class="animate__animated animate__zoomInDown">Latte Cat Cafe</h1>
+    </section>
+
+    <section class="aside1">
+        <h4>La cafetería</h4>
+        <ul>
+            <br>
+            <li>BEBIDAS</li>
+            <ul>
+                <li>Café</li>
+                <li>Jugo</li>
+            </ul>
+            <br>
+            <li>COMIDAS</li>
+            <ul>
+                <li>DULCE</li>
+                <ul>
+                    <li>Torta</li>
+                    <li>Tartas</li>
+                    <li>Magdalenas</li>
+                    <li>Budines</li>
+                </ul>
+                <li>SALADO</li>
+                <ul>
+                    <li>Sándwiches</li>
+                    <li>Chips</li>
+                    <li>Calentitos</li>
+                    <li>Pebete</li>
+                </ul>
+            </ul>
+        </ul>
+
+        <br>
+        <h4>Gatuarticulos</h4>
+
+        <ul>
+            <ul>
+                <li>Tazas</li>
+                <li>Llaveros</li>
+                <li>Fundas celular</li>
+                <li>Juguetes</li>
+                <li>Ropa para gatitos</li>
+            </ul>
+        </ul>
+    </section>
+    
+    <section class="conten">
+        {% for product in products %}
+        <div class="producto">
+            <img src="{{product.image.url}}" alt="Taza con tapa de gato">
+            <h4>{{product.title}}</h4>
+            <p>{{product.description}}</p>
+            <p class="precio">$ {{product.price}}</p>
+        </div>
+        {% endfor %}
+    </section>
+
+    <section class="aside2">
+        <p id="textoAside2"> Comprando en esta tienda estas colaborando con diferentes entidades que nos ayudan en el rescate de nuestros amigos felinos, ya que un porcentaje de las ventas es donado a dichas entidades. Además, nos ayudas a serguir proyectandonos en el futuro.</p>
+    </section>
+</div>
+{% endblock%}

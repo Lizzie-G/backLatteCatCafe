@@ -1,0 +1,79 @@
+{% extends "core/base.html" %}
+
+{% block header %} 
+{% load static %}
+<link rel="stylesheet" href="{% static 'core/css/home.css' %}">
+{% endblock %}
+
+{%block content%}<div class="grid">
+    <section class="header">
+        <img src="{% static 'core/img/logo.jpeg' %}" alt="Imagen del logo del establecimiento Latte Cat Cafe">
+        <h1 class="animate__animated animate__zoomInDown">Latte Cat Cafe</h1>
+    </section>
+
+    <section class="conten">
+        <ul>
+            <li class="box1">
+                <p class="texto"> Latte Cat Cafe es un encantador rincón para los amantes de los gatos y el café por
+                    igual. Donde podrás sumergirte en un ambiente acogedor y relajante, en compañía de nuestros
+                    amigos felinos quienes son las estrellas del espectáculo. Es un lugar perfecto para escapar del
+                    ajetreo y el estrés de la vida cotidiana, recargar tus energías con un riquisimo café y
+                    compartir momentos inolvidables con nuestros simpáticos felinos.</p>
+            </li>
+            <li class="box2"><img src="{% static 'core/img/imgPagPrincipal/conten1.jpg' %}"
+                    alt="Imagen de diferentes amigos felinos jugando"></li>
+            <li class="box3"><img src="{% static 'core/img/imgPagPrincipal/conten4.jpg' %}"
+                    alt="Imagen de diferentes amigos filinos jugando"></li>
+            <li class="box4"><img src="{% static 'core/img/imgPagPrincipal/conten5.jpg' %}" height="680px"
+                    alt="Imagen de diferentes amigos filinos jugando"></li>
+            <li class="box5"><img src="{% static 'core/img/imgPagPrincipal/conten2.jpg' %}"
+                    alt="Imagen de diferentes amigos filinos jugando"></li>
+            <li class="box6"><img src="{% static 'core/img/imgPagPrincipal/conten3.jpg' %}"
+                    alt="Imagen de diferentes amigos filinos jugando"></li>
+            <li class="box7">
+                <p class="texto">Latte Cat Cafe es mucho más que una simple cafetería, es un santuario para los
+                    amantes de los gatos y un refugio para los felinos que buscan un hogar. Además podras participar
+                    de eventos especiales, como noches de juegos, talleres de cuidado de gatos y actividades para
+                    recaudar fondos en apoyo a organizaciones de rescate de animales. Así que si estás buscando un
+                    lugar donde el café y la compañía felina se unan en armonía, Latte Cat Cafe es el destino
+                    perfecto para ti. </p>
+            </li>
+        </ul>
+    </section>
+
+    <section class="aside1">
+        <p>Adopta por estas dos razones: para darle un nuevo hogar a uno de nuestros amigos felinos, y a su vez
+            podrás brindarte la oportunidad de llenar tu vida de amor incondicional.
+            <br>
+            ^-^ Adopta y cambia dos vidas para siempre ^-^
+        </p>
+    </section>
+
+    <section class="info">
+        <article>
+            <img src="{% static 'core/img/indexInformacion/info1.jpg' %}"
+                alt="Nuestro amigos felinos descansando en la mesa, esperando un mimo.">
+            <h3>Quienes somos</h3>
+            <p>Somos un grupo de personas que se esfuerza en mimar a nuestros amigos felinos, y también encontrarles
+                una nueva familia.</p>
+            <p><a href="pages/reserva.html#somos' %}">Más infomación</a></p>
+        </article>
+        <article>
+            <img src="{% static 'core/img/indexInformacion/info2.jpg' %}"
+                alt="Nuestro amigo felino al estilo de la pintura de Miguel Angel">
+            <h3>Preguntas Frecuentes</h3>
+            <p>Si tienes alguna consulta no dudes en contactarnos, pero también puedes encontrar algunas consultas
+                que ya hemos respondido.</p>
+            <p><a href="{% static 'core/pages/contacto.html#preguntas' %}">Más infomación</a></p>
+        </article>
+        <article>
+            <img src="{% static 'core/img/indexInformacion/info3.jpeg' %}"
+                alt="Nuestros amigos felinos esperandote en el sillón del Latte Cat Cafe">
+            <h3>¿Somos importantes?</h3>
+            <p>Nosotros, desde nuestro pequeño espacio, ofrecemos a muchos beneficios. Y es por eso que queremos
+                invitarte a visitarnos. </p>
+            <p><a href="{% static 'core/pages/adopta.html#apopcion' %}">Más infomación</a></p>
+        </article>
+    </section>
+</div>
+{% endblock%}

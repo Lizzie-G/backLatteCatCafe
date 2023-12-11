@@ -1,0 +1,89 @@
+{% extends "core/base.html" %}
+
+{% block header %} 
+{% load static %}
+<link rel="stylesheet" href="{% static 'core/css/reserva.css' %}">
+{% endblock %}
+
+<!-- Contenido -->
+{% block content %}
+<div class="grid">
+    <section class="header">
+        <img src="{% static 'core/img/logo.jpeg' %}" alt="Imagen del logo del establecimiento Latte Cat Cafe">
+        <h1 class="animate__animated animate__zoomInDown">Latte Cat Cafe</h1>
+    </section>
+
+    <section class="album">
+        <p>Latte Cat Café esta dirigido por un grupo de amigos apasionados y amantes de los felinos. La idea del Cat Cafe surgio porque notabamos cada vez mas que los gatos son abandonados o que se pierden a menudo tienen que pasar mucho tiempo en refugios de animales, donde pueden estar expuestos a enfermedades, estrés y maltrato. Y decididmos que a travez de Latte Cat Cafe podriamos lograr la oportunidad de que se puedan adoptar ofreciendoles una oportunidad de una vida mejor.</p>
+        <img src="{% static 'core/img/reservas/lugardejuego.jpeg' %}">
+        <p>Con la ayuda de la comunidad, pudimos lograr el objetivo de albergar a gatos rescatados hasta concretar las adopciones, este lindo proyecto le da la oportunidad a nuestros cat lovers de involucrarse directamente en la rehabilitación de los michis, socializando, jugando y dándoles el afecto humano que tanto necesitan. La interacción entre ambos nos ayuda a fomentar la tenencia responsable de mascotas.</p>
+        <img src="{% static 'core/img/reservas/catpucchino.jpeg' %}">
+        <img src="{% static 'core/img/reservas/specialitycoffee.jpg' %}">
+        <p> Latte Cat Cafe se basa tambien en la creencia de que los gatos pueden tener un efecto positivo en el bienestar de las personas. Los estudios han demostrado que acariciar a un gato puede reducir el estrés y la ansiedad, y mejorar el estado de ánimo. Además, los gatos pueden proporcionar compañía y apoyo emocional.</p>
+        <img src="{% static 'core/img/reservas/gatoyadoptado.jpg' %}">
+        <p>Diseñamos un lindo santuario para los felimos de Latte Cat Cafe, con el objetivo de albergar gatitos rescatados hasta concretar sus adopciones y al mismo tiempo, ofrecerles a los amantes felinos una experiencia única e increíble junto a ellos. Y por supuesto, acompañado de un buen café y delicias.</p>
+    </section>
+
+    <section class="aside1">
+        <h2>PORQUE CONTAR NUESTRA HISTORIA?</h2>
+        <iframe src="https://giphy.com/embed/NqIqs8DGDDxT6fZcqG" width="60%" height="60%" style="position:relative"
+            frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+    </section>
+
+    <section class="historia1">
+        <div>
+            <br>
+            <p>Porque LATTE CAT CAFE se siente parte de la concienciación sobre los muchos beneficios de adoptar un gato como mascota.</p>
+            <br>
+        </div>
+    </section>
+
+    <section class="historia2">
+        <div>
+            <p>Porque sentimos que en LATTE CAT CAFE hemos logrado combinar el disfrute de la compania de los gatos y familias en un ambiente acogedor y agradable.</p>
+        </div>
+    </section>
+
+    <section class="formu"><br>
+        <h1>Formulario Reservas</h1><br>
+        <form id="formReserva" action="https://formsubmit.co/liziegrosso@gmail.com" method="POST">
+            <fieldset>
+                <legend>Datos personales</legend>
+                <label for="apellido" name="apellido" id="apellido">Apellido
+                    <input type="text" name="apellido" id="apellido" required>
+                </label>
+                <br>
+                <label for="nombre" name="nombre" id="nombre">Nombre
+                    <input type="text" name="nombre" id="nombre" required>
+                </label>
+                <br>
+                <label for="domicilio" name="domicilio" id="domicilio">Domicilio
+                    <input type="text" name="domicilio" id="domicilio" required>
+                </label>
+                <br>
+                <label for="dni">DNI
+                    <input type="number" name="dni" id="dni" min="1000000" max="99999999" step="1" required>
+                </label>
+                <br>
+                <label for="mail">E-mail
+                    <input type="mail" name="mail" id="mail" required minlength="8">
+                    <span class="error" aria-live="polite"></span>
+                </label>
+                <br>
+                <label for="fecha">Fecha a reservar
+                    <input type="date" id="start" name="trip-start" value="2023-10-01" min="2023-01-01" max="2023-12-31" />
+                </label>
+                </select>
+                <br>
+                <br>
+                <label for="mensaje">Mensaje
+                    <textarea id="mensaje" name="mensaje" cols="60" rows="10" resize="none" required placeholder="Contanos en un breve resumen porque quieres una mascota">
+                    </textarea>
+                </label>
+
+                <input type="submit" name="submit" value="Enviar Datos">
+            </fieldset>
+        </form>
+    </section>
+</div>
+{% endblock%}

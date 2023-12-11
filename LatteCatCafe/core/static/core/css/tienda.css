@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+/* Tipografía para titulos font-family: 'Comfortaa', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Pompiere&display=swap');
+/* Tipografía para textos  font-family: 'Pompiere', cursive;*/
+
+:root {
+    --fondo: #efe1cf;
+    --hover: #C8AE7D;
+    --titulos: #765827;
+    --subtitulos: #65451F;
+    --parrafos: #261908;
+}
+
+* {
+    width: 100%;
+    margin: 0em;
+}
+
+body {
+    font-family: 'Pompiere', cursive;
+    background-color: var(--fondo);
+    padding-top: 3.8em;
+}
+
+body::-webkit-scrollbar {
+    width: 1em;
+}
+  
+body::-webkit-scrollbar-track {
+    background: var(--subtitulos);
+}
+  
+body::-webkit-scrollbar-thumb {
+    background-color: var(--hover); 
+    border-radius: 2em;
+}
+
+header {
+    background-color: var(--subtitulos);
+    width: 100%;
+    height: 2em;
+    font-size: 1.5em;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+header ul {
+    display: inline;
+    height: 2em;
+}
+
+header ul li {
+    display: inline-block;
+    width: fit-content;
+    margin-top: 0.4em;
+}
+
+header ul li :hover {
+    background-color: var(--hover);
+    color: var(--fondo);
+    margin: 1.2em;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: var(--parrafos);
+    padding: 0.4em;
+}
+
+header ul li a:hover {
+    color: var(--subtitulos);
+    background-color: var(--fondo);
+}
+
+.grid .header {
+    grid-area: header;
+    display: grid;
+    place-content: center;
+    justify-items: center;
+    height: 10.7em;
+}
+
+.grid .header img {
+    width: 9em;
+}
+
+.grid .header h1 {
+    font-family: 'Comfortaa', cursive;
+    font-size: 1.8em;
+    margin-top: 0.5em;
+}
+
+.grid .conten {
+    grid-area: conten;
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 1em;
+}
+
+.grid .conten .producto {
+    border: 0.09em solid var(--titulos);
+    width: 13em;
+    height: 17.5em;
+    text-align: center;
+    overflow: hidden;
+    background-color: var(--hover);
+}
+
+.grid .conten .producto img {
+    width: fit-content;
+    height: 9em;
+    overflow-x: hidden;
+    object-position: center;
+}
+
+.grid .conten .producto h4 {
+    color: var(--subtitulos);
+    font-family: 'Comfortaa', cursive;
+    padding-bottom: 0.6em;
+}
+
+.grid .conten .producto p {
+    padding-bottom: 0.6em;
+}
+
+.grid .conten .producto .precio {
+    color: var(--hover);
+    font-weight: bolder;
+    padding: 0.5em 0em;
+    background-color: var(--parrafos);
+    border: 0.06em solid var(--subtitulos);
+}
+
+.grid .aside1 {
+    background-color: var(--parrafos);
+    border-radius: 1em;
+    color: var(--hover);
+    grid-area: aside1;
+    height: 62em;
+    padding: 1em;
+}
+
+.grid .aside2 {
+    grid-area: aside2;
+    font-size: x-large;
+    text-align: center;
+    padding: 0.5em 0em;
+    margin: 1em 0em;
+    background-color: var(--hover);
+    box-shadow: 0.3em 0.3em 0.8em 0.7em var(--parrafos), inset 0em 0.1em var(--parrafos);
+}
+
+footer {
+    background-color: var(--subtitulos);
+    color: var(--fondo);
+    font-size: 1.2em;
+    display: inline-flex;
+    padding: 0.3em 0em;
+    align-items: center;
+}
+
+footer #imgFooter {
+    float: left;
+    width: auto;
+    height: 8.8em;
+    margin-right: 3em;
+}
+
+footer #nuestrosDatos {
+    width: 25em;
+}
+
+footer #nuestrosDatos ul {
+    display: inline;
+    padding: 0em;
+}
+
+footer #nuestrosDatos ul li {
+    display: block;
+}
+
+footer #nuestrosDatos .horarios>li {
+    padding-left: 1.5em;
+    font-size: 1em;
+}
+
+footer #nuestrosDatos ul li a {
+    text-decoration: none;
+    color: var(--hover);
+}
+
+footer #redes {
+    display: inline;
+    text-align: center;
+    width: 37.5em;
+    margin: 0em 3em;
+}
+
+footer #redes img {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    padding: 0.3em;
+    border-radius: 0.8em;
+    -webkit-border-radius: 0.8em;
+    -moz-border-radius: 0.8em;
+    -ms-border-radius: 0.8em;
+    -o-border-radius: 0.8em;
+}
+
+footer #redes p {
+    display: inline-block;
+}
+
+.grid {
+    width: 80em;
+    display: grid;
+    gap: 0.4em;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5);
+    grid-template-areas: "header conten conten conten conten"
+        "aside1 conten conten conten conten"
+        "aside1 conten conten conten conten"
+        "aside1 conten conten conten conten"
+        "aside2 aside2 aside2 aside2 aside2";
+    margin: auto;
+}
+
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#contenedor_carga {
+    background-color: var(--hover);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    transition: all 3s ease;
+    -webkit-transition: all 3s ease;
+    -moz-transition: all 3s ease;
+    -ms-transition: all 3s ease;
+    -o-transition: all 3s ease;
+    z-index: 10000;
+}
+
+#carga {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
+}
+
+
+/* Este es el estilo para tamaño tableta */
+
+@media (max-width: 992px) and (min-width: 600px) {
+    header {
+        width: 100%;
+    }
+
+    header nav ul {
+        padding: 0em;
+    }
+
+    .grid .conten {
+        width: 100%;
+    }
+
+    .grid .conten ul {
+        grid-template-columns: repeat(3, 3fr);
+        grid-template-rows: repeat(3, auto);
+    }
+
+    .grid .conten ul .box1,
+    .box7 {
+        font-size: 1.1em;
+    }
+
+    .grid .info {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        overflow-y: auto;
+    }
+
+    .grid .info article {
+        width: 15em;
+    }
+
+    .grid .info article img {
+        width: fit-content;
+        height: 10em;
+    }
+
+    .grid .info article h3 {
+        color: var(--subtitulos);
+        font-family: 'Comfortaa', cursive;
+        margin: 0.4em 0em;
+    }
+
+    .grid .info article p {
+        padding-top: 6%;
+        padding-bottom: 3%;
+    }
+
+    .grid .info article a {
+        padding: 0.4em 5.1em;
+    }
+
+    .grid .info article a:hover {
+        padding: 0.4em 5.1em;
+    }
+
+    footer {
+        font-size: 1em;
+    }
+
+    footer #nuestrosDatos .horarios>li {
+        font-size: 0.9em;
+    }
+
+    footer #direccion {
+        width: 50em;
+        margin-left: 2em;
+    }
+
+    .grid {
+        width: 96%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "header header"
+            "conten conten"
+            "aside1 aside1"
+            "info info"
+            "aside2 aside2";
+    }
+}

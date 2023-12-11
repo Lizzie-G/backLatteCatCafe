@@ -1,0 +1,556 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+/* Tipografía para titulos font-family: 'Comfortaa', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Pompiere&display=swap');
+/* Tipografía para textos  font-family: 'Pompiere', cursive;*/
+
+:root {
+    --fondo: #efe1cf;
+    --hover: #C8AE7D;
+    --titulos: #765827;
+    --subtitulos: #65451F;
+    --parrafos: #261908;
+}
+
+* {
+    width: 100%;
+    margin: 0em;
+}
+
+body {
+    font-family: 'Pompiere', cursive;
+    background-color: var(--fondo);
+    padding-top: 3.8em;
+}
+
+body::-webkit-scrollbar {
+    width: 1em;
+}
+  
+body::-webkit-scrollbar-track {
+    background: var(--subtitulos);
+}
+  
+body::-webkit-scrollbar-thumb {
+    background-color: var(--hover); 
+    border-radius: 2em;
+}
+
+header {
+    background-color: var(--subtitulos);
+    width: 100%;
+    height: 2em;
+    font-size: 1.5em;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+header ul {
+    display: inline;
+    height: 2em;
+}
+
+header ul li {
+    display: inline-block;
+    width: fit-content;
+    margin-top: 0.4em;
+}
+
+header ul li :hover {
+    background-color: var(--hover);
+    color: var(--fondo);
+    margin: 1.2em;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: var(--parrafos);
+    padding: 0.4em;
+}
+
+header ul li a:hover {
+    color: var(--subtitulos);
+    background-color: var(--fondo);
+}
+
+.grid .header {
+    grid-area: header;
+    display: inline;
+    justify-self: center;
+    text-align: center;
+    width: 80em;
+}
+
+.grid .header .empleado {
+    width: 25em;
+    height: 30em;
+    display: inline-table;
+    background-color: var(--hover);
+    margin: 0em auto;
+}
+
+.grid .header .empleado img {
+    width: 25em;
+    height: 19em;
+    overflow: hidden;
+}
+
+.grid .header .empleado h4 {
+    font-family: 'Comfortaa', cursive;
+    font-size: 1.2em;
+    color: var(--subtitulos);
+    padding-top: 0.5em;
+}
+
+.grid .header .empleado p {
+    font-size: 1.2em;
+    color: var(--subtitulos);
+    margin-bottom: 0;
+    padding: 0.6em;
+    width: fit-content;
+}
+
+.grid .conten {
+    grid-area: conten;
+    height: fit-content;
+    margin-bottom: 1em;
+    top: 0;
+}
+
+.grid .conten #myVideo {
+    position: fixed;
+    min-width: 80%;
+    min-height: 80%;
+    top: 0;
+}
+
+.grid .conten p {
+    font-size: 1.5em;
+    font-family: 'Comfortaa', cursive;
+    font-style: italic;
+    text-align: center;
+    color: var(--hover);
+    -webkit-text-stroke: 0.03em var(--parrafos);
+}
+
+.grid .aside1 {
+    grid-area: aside1;
+}
+
+.grid .aside1 h2 {
+    text-align: center;
+    font-family: 'Comfortaa', cursive;
+    font-size: 2.5em;
+    text-decoration: underline;
+    color: var(--titulos);
+    padding-bottom: 0.5em;
+}
+
+.grid .aside1 p {
+    font-family: 'Pompiere', cursive;
+    font-size: 1.8em;
+    padding: 0.19em;
+    width: fit-content;
+    position: relative;
+    text-align: justify;
+    color: var(--parrafos);
+}
+
+.grid .aside1 p img {
+    display: inline-block;
+    width: 1.1em;
+    height: 1.1em;
+    border-radius: 0.8em;
+    -webkit-border-radius: 0.8em;
+    -moz-border-radius: 0.8em;
+    -ms-border-radius: 0.8em;
+    -o-border-radius: 0.8em;
+}
+
+.grid .aside1 h3 {
+    text-align: center;
+    font-family: 'Comfortaa', cursive;
+    font-size: 1.5em;
+    text-decoration: none;
+    color: var(--subtitulos);
+    padding: 1.38em 0em;
+
+}
+
+.grid .aside1 img {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    width: 100%;
+    overflow: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.grid .info {
+    grid-area: info;
+}
+
+.grid .info .titulo {
+    text-align: center;
+    font-family: 'Comfortaa', cursive;
+    font-size: 2.5em;
+    margin: 0.8em 0em;
+    text-decoration: underline;
+    color: var(--titulos);
+}
+
+.grid .info .dropdown {
+    position: relative;
+    display: inline-block;
+    font-family: 'Pompiere', cursive;
+    font-size: 1.8em;
+    background-color: var(--titulos);
+    color: var(--fondo);
+    width: 100%;
+    margin-bottom: 0.8em;
+    padding: 0.3em 0em;
+}
+
+.grid .info .dropdown-content {
+    display: none;
+    position: absolute;
+    font-family: 'Pompiere', cursive;
+    background-color: var(--hover);
+    min-width: 10em;
+    box-shadow: 0em 80.5em 1em 0em var(--parrafos);
+    padding: 0.75em 1em;
+    z-index: 1;
+    width: fit-content;
+}
+
+.grid .info .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.grid .info .video p {
+    font-size: 1.7em;
+    font-family: 'Comfortaa', cursive;
+    font-style: italic;
+    text-align: center;
+    color: var(--hover);
+    -webkit-text-stroke: 0.03em var(--parrafos);
+    padding: 2.3em 0em;
+    ;
+    margin: 0%;
+}
+
+footer {
+    background-color: var(--subtitulos);
+    color: var(--fondo);
+    font-size: 1.2em;
+    display: inline-flex;
+    padding: 0.3em 0em;
+    align-items: center;
+}
+
+footer #imgFooter {
+    float: left;
+    width: auto;
+    height: 8.8em;
+    margin-right: 3em;
+}
+
+footer #nuestrosDatos {
+    width: 25em;
+}
+
+footer #nuestrosDatos ul {
+    display: inline;
+    padding: 0em;
+}
+
+footer #nuestrosDatos ul li {
+    display: block;
+}
+
+footer #nuestrosDatos .horarios>li {
+    padding-left: 1.5em;
+    font-size: 1em;
+}
+
+footer #nuestrosDatos ul li a {
+    text-decoration: none;
+    color: var(--hover);
+}
+
+footer #redes {
+    display: inline;
+    text-align: center;
+    width: 37.5em;
+    margin: 0em 3em;
+}
+
+footer #redes img {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    padding: 0.3em;
+    border-radius: 0.8em;
+    -webkit-border-radius: 0.8em;
+    -moz-border-radius: 0.8em;
+    -ms-border-radius: 0.8em;
+    -o-border-radius: 0.8em;
+}
+
+footer #redes p {
+    display: inline-block;
+}
+
+.grid {
+    width: 80em;
+    display: grid;
+    gap: 1em;
+    grid-template-columns: 30em 20em 28em;
+    grid-template-areas: "header header header"
+        "conten info info"
+        "aside1 info info"
+        "aside1 info info";
+    margin: auto;
+    ;
+}
+
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#contenedor_carga {
+    background-color: var(--hover);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    transition: all 3s ease;
+    -webkit-transition: all 3s ease;
+    -moz-transition: all 3s ease;
+    -ms-transition: all 3s ease;
+    -o-transition: all 3s ease;
+    z-index: 10000;
+}
+
+#carga {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
+}
+
+/* Este es el estilo para tamaño tableta */
+
+@media (max-width: 992px) and (min-width: 700px) {
+    header {
+        width: 100%;
+    }
+
+    header nav ul {
+        padding: 0em;
+    }
+
+    .grid .header {
+        display: grid;
+        gap: 1em;
+        grid-template-columns: repeat(3, auto);
+        overflow-y: auto;
+        width: 100%;
+        height: 27em;
+    }
+
+    .grid .header .empleado {
+        width: 20em;
+        height: 27em;
+    }
+
+    .grid .header .empleado img {
+        width: 20em;
+        height: 15em;
+        overflow: hidden;
+    }
+
+    .grid .header .empleado h4 {
+        margin: 0.1em 0em;
+    }
+
+    .grid .header .empleado p {
+        padding-bottom: 0em;
+        margin-bottom: 0em;
+    }
+
+    .grid .conten {
+        height: fit-content;
+        margin-bottom: 1em;
+    }
+
+    .grid .conten p {
+        font-size: 1em;
+    }
+
+    .grid .aside1 h2 {
+        font-size: 1.5em;
+    }
+
+    .grid .aside1 p {
+        font-size: 1.2em;
+    }
+
+    .grid .aside1 h3 {
+        font-size: 0.85em;
+    }
+
+    .grid .info {
+        grid-area: info;
+    }
+
+    .grid .info .titulo {
+        font-size: 1.5em;
+    }
+
+    .grid .info .dropdown {
+        font-size: 1.2em;
+    }
+
+    .grid .info .video p {
+        font-size: 1em;
+        padding: 0em;
+        margin-top: 3em;
+    }
+
+    footer {
+        font-size: 1em;
+    }
+
+    footer #nuestrosDatos .horarios>li {
+        font-size: 0.9em;
+    }
+
+    footer #direccion {
+        width: 50em;
+        margin-left: 2em;
+    }
+
+    .grid {
+        width: 96%;
+        display: grid;
+        gap: 0.4em;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "header header"
+            "conten info"
+            "aside1 info "
+            "aside1 info ";
+        margin: auto;
+        ;
+    }
+
+}
+
+/* Este es el estilo para tamaño celular */
+
+@media (max-width: 700px) {
+    body {
+        padding-top: 3em;
+    }
+
+    header {
+        height: fit-content;
+        font-size: 1em;
+    }
+
+    header ul li {
+        padding-bottom: 0.4em;
+    }
+
+
+    .grid .conten p {
+        font-size: 1.2em;
+    }
+
+
+    .grid .aside1 h2 {
+        padding-top: 0.6em;
+        border-top: 0.05em var(--parrafos) solid;
+    }
+
+    .grid .aside1 p {
+        font-size: 1.5em;
+    }
+
+    .grid .aside1 h3 {
+        font-size: 1.2em;
+    }
+
+    .grid .info .titulo {
+        font-size: 2.0em;
+    }
+
+    .grid .info .dropdown {
+        font-size: 1.5em;
+    }
+
+    .grid .info .dropdown-content {
+        text-align: justify;
+    }
+
+    footer {
+        width: 100%;
+        display: grid;
+        gap: 0.4em;
+        grid-template-columns: repeat(2, 2fr);
+        grid-template-rows: repeat(2, auto);
+    }
+
+    footer #imgFooter {
+        width: fit-content;
+        height: 7.8em;
+        padding-left: 1em;
+        margin: 0em;
+    }
+
+    footer #nuestrosDatos {
+        width: fit-content;
+        font-size: 80%;
+    }
+
+    footer #direccion {
+        padding-left: 1em;
+        width: fit-content;
+
+    }
+
+    footer #redes {
+        width: fit-content;
+    }
+
+    footer #redes p {
+        font-size: 0.8em;
+    }
+
+    footer #redes img {
+        width: 1em;
+        height: 1em;
+    }
+
+    .grid {
+        text-align: center;
+        width: 100%;
+        display: grid;
+        gap: 0.4em;
+        grid-template-columns: 100%;
+        grid-template-areas: "header"
+            "conten"
+            "aside1"
+            "info";
+        margin: auto;
+    }
+}

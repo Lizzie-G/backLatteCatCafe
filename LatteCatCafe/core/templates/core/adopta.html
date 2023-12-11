@@ -1,0 +1,169 @@
+{% extends 'core/base.html' %}
+
+{% block header %} 
+{% load static %}
+<link rel="stylesheet" href="{% static 'core/css/adopta.css' %}">
+{% endblock %}
+
+<!-- Contenido -->
+{% block content %}
+<div class="grid">
+    <section class="header">
+        <img src="{% static 'core/img/logo.jpeg'%}" alt="Imagen del logo del establecimiento Latte Cat Cafe">
+        <h1 class="animate__animated animate__zoomInDown">Latte Cat Cafe</h1>
+    </section>
+
+    <section class="adopt">
+        <div id="adopciones">
+            <h2>La importante decision que se toma al adoptar una mascota</h2>
+            <p>Adoptar una mascota es una decisión importante y emocionante que conlleva una gran responsabilidad. Antes de dar este paso, es crucial comprender la importancia de cuidar adecuadamente a un animal y brindarle un hogar amoroso y seguro. Adoptar una mascota no solo implica la satisfacción de tener un compañero leal, sino que también tiene un impacto significativo en la vida del animal y en nuestra propiavida.
+            <br>En primer lugar, al adoptar una mascota, estamos salvando una vida. Muchos animales abandonados o sin hogar esperan en refugios o organizaciones de rescate, buscando desesperadamente un hogar donde puedan recibir amor y atención. Al darles una oportunidad, les brindamos una segunda oportunidad para una vida mejor. Adoptar en lugar de comprar también ayuda a reducir el número de animales en los refugios y a promover la adopción responsable.
+            <br>Además de salvar una vida, cuidar de una mascota nos enseña importantes lecciones de responsabilidad. Los animales dependen completamente de nosotros para su alimentación, cuidado veterinario, ejercicio y afecto. Debemos asegurarnos de proporcionarles una dieta adecuada, agua fresca, atención médica regular y un entorno seguro. Esto implica invertir tiempo, energía y recursos para garantizar su bienestar y felicidad.
+            <br>La conexión emocional que desarrollamos con nuestras mascotas también es invaluable. Los animales son seres sociales que brindan compañía, alegría y afecto incondicional. Están ahí para nosotros en los buenos y malos momentos, y su presencia puede tener un impacto positivo en nuestra salud mental y emocional. La interacción con ellos puede reducir el estrés, la ansiedad y la soledad, y promover sentimientos de felicidad y bienestar.
+            <br>Al adoptar una mascota, también estamos fomentando la empatía y el respeto hacia los seres vivos. Les enseñamos a nuestros hijos el valor de cuidar y proteger a otros seres vivos y a tratarlos con amabilidad. Esto ayuda a crear una sociedad más compasiva y consciente, donde se valora la vida de todas las criaturas.
+            <br>Por último, al adoptar una mascota, estamos creando un lazo duradero. Nuestras mascotas se convierten en miembros de nuestra familia y nos acompañan durante muchos años. La relación que construimos con ellos es única y especial, llena de amor y lealtad. A cambio de nuestro cuidado, recibimos su amor incondicional y devoción, lo cual es una experiencia maravillosa y gratificante.</p>
+        </div>
+    </section>
+
+    <section class="album">
+        <img src="{% static 'core/img/gatos/imagen1.jpg' %}">
+        <img src="{% static 'core/img/gatos/imagen2.jpg' %}">
+        <img src="{% static 'core/img/gatos/imagen3.jpg' %}">
+        <img src="{% static 'core/img/gatos/imagen4.jpg' %}">
+        <img src="{% static 'core/img/gatos/imagen5.jpg' %}">
+        <img src="{% static 'core/img/gatos/imagen6.jpg' %}">
+        <img src="{% static 'core/img/gatos/imagen7.jpg' %}">
+        <p>En resumen, la adopción de una mascota es un acto de bondad y responsabilidad. Al brindarles un hogar amoroso, estamos salvando una vida y mejorando la nuestra. Nos enseñan lecciones valiosas, nos brindan compañía y nos ayudan a crecer como personas. Adoptar una mascota es una decisión que debe tomarse con seriedad, pero con el compromiso adecuado, puede llevar a una relación duradera y enriquecedora.</p>
+    </section>
+    <section class="aside1">
+        <article>
+            <img src="{% static 'core/img/adopcion/alex.jpg' %}" alt="Foto gato Alex">
+            <h4>Alex</h4>
+            <p>Macho. 6 meses. Cariñoso. Duerme largas sietas. Castrado y desparasitado. Se lleva con perros.</p>
+        </article>
+
+        <article>
+            <img src="{% static 'core/img/adopcion/anton.jpg' %}" alt="Foto gato Anton">
+            <h4>Anton</h4>
+            <p>Macho. 1 año. Disfruta de los mimos. Un poco timido. Castrado y desparasitado. </p>
+        </article>
+        
+        <article>
+            <img src="{% static 'core/img/adopcion/arturo.jpg' %}" alt="Foto gato Arturo">
+            <h4>Arturo</h4>
+            <p>Macho. 3 meses. Este bebe necesita que lo llenen de amor. Desparasitado.</p>
+        </article>
+        
+        <article>
+            <img src="{% static 'core/img/adopcion/benito.jpg' %}" alt="Foto gato Benito">
+            <h4>Benito</h4>
+            <p>Macho. 5 meses. Su cara lo dice todo, jugueton. Super activo. Castrado y desparasitado. </p>
+        </article>
+        
+        <article>
+            <img src="{% static 'core/img/adopcion/carlitos.jpg' %}" alt="Foto gato Carlitos">
+            <h4>Carlitos</h4>
+            <p>Macho. 1 año y 3 meses. Curioso. Duerme largas sietas. Castrado y desparasitado. Se lleva con perros.</p>
+        </article>
+
+        <article>
+            <img src="{% static 'core/img/adopcion/josema.jpg' %}" alt="Foto gato Josema">
+            <h4>Josema</h4>
+            <p>Macho. 7 meses. Un poco timido, pero dispuesto a recibir amor. Castrado y desparasitado.</p>
+        </article>
+        
+        <article>
+            <img src="{% static 'core/img/adopcion/kari.jpg' %}" alt="Foto gato Kari">
+            <h4>Kari</h4>
+            <p>Hembra. 9 meses. Dulce y mimosa. Duerme largas sietas. Esterilizada y desparasitado.</p>
+        </article>
+        
+        <article>
+            <img src="{% static 'core/img/adopcion/magnolia.jpg' %}" alt="Foto gato Magnolia">
+            <h4>Magnolia</h4>
+            <p>Hembra. 5 meses. Juguetona y mimosa. Esterilizada y desparasitado. Se lleva con perros.</p>
+        </article>
+        
+        <article>
+            <img src="{% static 'core/img/adopcion/felipe.jpg' %}" alt="Foto gato Felipe">
+            <h4>Felipe</h4>
+            <p>Macho. 1 año. Cariñoso. Reclamador de mimos. Castrado y desparasitado. Se lleva con perros.</p>
+        </article>
+        
+        <article>
+            <img src="{% static 'core/img/adopcion/rita.jpg' %}" alt="Foto gato Rita">
+            <h4>Rita</h4>
+            <p>Hermbra. 1 año y 4 meses. Curiosa. Duerme largas sietas. Esterilizada y desparasitado. No se lleva
+                con perros.</p>
+        </article>
+        
+        <article>
+            <img src="{% static 'core/img/adopcion/soda.jpg' %}" alt="Foto gato Soda">
+            <h4>Soda</h4>
+            <p>Macho. 2 años. Le gusta jugar y dormir largas sietas. Castrado y desparasitado. Se lleva con perros.</p>
+        </article>
+        
+        <article>
+            <img src="{% static 'core/img/adopcion/tom.jpg' %}" alt="Foto gato Tom">
+            <h4>Tom</h4>
+            <p>Macho. 10 meses. Te seduce con sus ronroneos. Jugueton y mimoso. Castrado y desparasitado.</p>
+        </article>
+    </section>
+
+    <section class="formu">
+        <h1>Formulario para adopcion de Mascotas</h1><br>
+        <form id="formuadopcion">
+            <fieldset>
+                <legend>Datos personales</legend>
+                <label for="apellido" name="apellido" id="apellido">Apellido
+                    <input type="text" name="apellido" id="apellido" required>
+                </label>
+                <br>
+                <label for="nombre" name="nombre" id="nombre">Nombre
+                    <input type="text" name="nombre" id="nombre" required>
+                </label>
+                <br>
+                <label for="domicilio" name="domicilio" id="domicilio">Domicilio
+                    <input type="text" name="domicilio" id="domicilio" required>
+                </label>
+                <br>
+                <label for="dni">DNI
+                    <input type="number" name="dni" id="dni" min="1000000" max="99999999" required>
+                </label>
+                <br>
+                <label for="mail">E-mail
+                    <input type="mail" name="mail" id="email" required>
+                </label>
+                <br>
+                <label for="mascota">Mascota a adoptar
+                    <select id="mascota" name="mascota" required>
+                        <option value="">Seleccionar</option>
+                        <option value="alex">Alex</option>
+                        <option value="anton">Anton</option>
+                        <option value="arturo">Arturo</option>
+                        <option value="benito">Benito</option>
+                        <option value="carlitos">Carlitos</option>
+                        <option value="felipe">Felipe</option>
+                        <option value="josema">Josema</option>
+                        <option value="kari">Kari</option>
+                        <option value="magnolia">Magnolia</option>
+                        <option value="rita">Rita</option>
+                        <option value="soda">Soda</option>
+                        <option value="tom">Tom</option>
+                    </select>
+                </label>
+                <br>
+                <br>
+                <label for="mensaje">Mensaje
+                    <textarea id="mensaje" name="mensaje" cols="40" rows="5" resize="none" required
+                        placeholder="Contanos en un breve resumen porque quieres una mascota">
+                    </textarea>
+                </label>
+                <input type="submit" name="submit" value="Enviar Datos">
+            </fieldset>
+        </form>
+        <a href="{% static 'core/Formularios/contratoDeAdopcion.pdf' %}"
+            download="Latte Cat Cafe - Contrato de adopción.pdf">Formulario de adopción</a>
+    </section>
+</div>
+{% endblock%}

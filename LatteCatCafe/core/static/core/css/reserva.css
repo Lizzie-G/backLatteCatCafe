@@ -1,0 +1,377 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
+/* Tipografía para titulos font-family: 'Comfortaa', cursive; */
+@import url("https://fonts.googleapis.com/css2?family=Pompiere&display=swap");
+/* Tipografía para textos  font-family: 'Pompiere', cursive;*/
+
+:root {
+  --fondo: #efe1cf;
+  --hover: #c8ae7d;
+  --titulos: #765827;
+  --subtitulos: #65451f;
+  --parrafos: #261908;
+}
+
+* {
+  width: 100%;
+  margin: 0em;
+}
+
+body {
+  font-family: "Pompiere", cursive;
+  background-color: var(--fondo);
+  padding-top: 3.8em;
+}
+
+body::-webkit-scrollbar {
+  width: 1em;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--subtitulos);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--hover); 
+  border-radius: 2em;
+}
+
+header {
+  background-color: var(--subtitulos);
+  width: 100%;
+  height: 2em;
+  font-size: 1.5em;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+header ul {
+  display: inline;
+  height: 2em;
+}
+
+header ul li {
+  display: inline-block;
+  width: fit-content;
+  margin-top: 0.4em;
+}
+
+header ul li :hover {
+  background-color: var(--hover);
+  color: var(--fondo);
+  margin: 1.2em;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: var(--parrafos);
+  padding: 0.4em;
+}
+
+header ul li a:hover {
+  color: var(--subtitulos);
+  background-color: var(--fondo);
+}
+
+.grid .header {
+  grid-area: header;
+  display: inline;
+}
+
+.grid .header img {
+  width: 9em;
+  float: left;
+  padding-left: 5em;
+}
+
+.grid .header h1 {
+  font-size: 3em;
+  color: var(--titulos);
+  width: fit-content;
+  float: right;
+  padding-right: 1.7em;
+  padding-top: 0.55em;
+}
+
+.grid .album {
+  grid-area: album;
+  background: var(--parrafos);
+  display: grid;
+  justify-self: center;
+  grid-template-columns: repeat(auto-fit, minmax(18.75em, 1fr));
+  width: 80em;
+}
+
+.grid .album img {
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+  object-fit: cover;
+}
+
+.grid .album p {
+  width: fit-content;
+  color: var(--fondo);
+  font-size: 1.4em;
+  text-align: center;
+  align-self: center;
+  padding: 0.7em;
+}
+
+.grid .aside1 {
+  background-color: var(--subtitulos);
+  border: 0.1em solid var(--parrafos);
+  width: 90%;
+  height: 90%;
+  align-self: center;
+  font-size: 1.3em;
+  font-family: "Comfortaa", cursive;
+  color: var(--fondo);
+  text-align: center;
+  padding: 0.2em;
+  border-radius: 0.75em;
+  -webkit-border-radius: 0.75em;
+  -moz-border-radius: 0.75em;
+  -ms-border-radius: 0.75em;
+  -o-border-radius: 0.75em;
+  animation-duration: 1ms;
+}
+
+.grid .historia1,
+.grid .historia2 {
+  background-color: var(--subtitulos);
+  border: 0.05em solid var(--parrafos);
+  width: 90%;
+  height: fit-content;
+  align-self: center;
+  border-radius: 0.75em;
+  -webkit-border-radius: 0.75em;
+  -moz-border-radius: 0.75em;
+  -ms-border-radius: 0.75em;
+  -o-border-radius: 0.75em;
+}
+
+.grid .historia1 p,
+.grid .historia2 p {
+  align-self: center;
+  font-size: 2.2em;
+  font-family: "Pompiere", cursive;
+  color: var(--fondo);
+  text-align: center;
+  padding: 0.2em;
+  width: fit-content;
+}
+
+.grid .formu {
+  grid-area: formu;
+  width: 35em;
+  height: auto;
+  padding: 2.5em;
+  border-radius: 0.625em;
+  background-color: var(--parrafos);
+  margin-bottom: 0.6em;
+  color: var(--fondo);
+  font-family: 'Comfortaa', cursive;
+  display: inline;
+  justify-self: center;
+<<<<<<< HEAD
+=======
+}
+
+.grid .formu fieldset {
+  width: fit-content;
+>>>>>>> 11baa3d7e758715f98dc631a2829887a3751cc50
+}
+
+.grid .formu h1 {
+  color: var(--fondo);
+  font-size: 3em;
+  text-align: center;
+}
+
+.grid .formu legend {
+  color: var(--fondo);
+  font-size: 1.7em;
+}
+
+.grid .formu label {
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 1em;
+}
+
+.grid .formu #fecha {
+  font-weight: bold;
+  display: inline-block;
+  background-color: var(--fondo);
+  padding: 0.5em 0em;
+}
+
+.grid .formu #dni {
+  font-weight: bold;
+  display: inline-block;
+  border-radius: 0.06em;
+  background-color: var(--fondo);
+  padding: 0.5em 0em;
+  -webkit-border-radius: 0.06em;
+  -moz-border-radius: 0.06em;
+  -ms-border-radius: 0.06em;
+  -o-border-radius: 0.06em;
+}
+
+.grid .formu form input[type="text"],
+.grid .formu form input[type="mail"] {
+  border: 0.06em solid var(--parrafos);
+  border-radius: 0.19em;
+  background-color: var(--fondo);
+  display: inline-block;
+  padding: 0.5em 0em;
+  -webkit-border-radius: 0.19em;
+  -moz-border-radius: 0.19em;
+  -ms-border-radius: 0.19em;
+  -o-border-radius: 0.19em;
+}
+
+form input[type="submit"] {
+  padding: 0.5em 1em;
+  margin-top: 2em;
+  border: 0.06em solid var(--fondo);
+  border-radius: 0.31em;
+  display: block;
+  color: var(--fondo);
+  background-color: var(--parrafos);
+  -webkit-border-radius: 0.31em;
+  -moz-border-radius: 0.31em;
+  -ms-border-radius: 0.31em;
+  -o-border-radius: 0.31em;
+}
+
+form input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+#textarea {
+  width: 30em;
+  height: 6.25em;
+  border: 0.004em solid var(--fondo);
+  border-radius: 0.19em;
+  background-color: var(--hover);
+  margin: 1em 0;
+  resize: none;
+  display: block;
+  -webkit-border-radius: 0.19em;
+  -moz-border-radius: 0.19em;
+  -ms-border-radius: 0.19em;
+  -o-border-radius: 0.19em;
+}
+
+footer {
+  background-color: var(--subtitulos);
+  color: var(--fondo);
+  font-size: 1.2em;
+  display: inline-flex;
+  padding: 0.3em 0em;
+  align-items: center;
+}
+
+footer #imgFooter {
+  float: left;
+  width: auto;
+  height: 8.8em;
+  margin-right: 3em;
+}
+
+footer #nuestrosDatos {
+  width: 25em;
+}
+
+footer #nuestrosDatos ul {
+  display: inline;
+  padding: 0em;
+}
+
+footer #nuestrosDatos ul li {
+  display: block;
+}
+
+footer #nuestrosDatos .horarios>li {
+  padding-left: 1.5em;
+  font-size: 1em;
+}
+
+footer #nuestrosDatos ul li a {
+  text-decoration: none;
+  color: var(--hover);
+}
+
+footer #direccion p {
+  font-size: 1em;
+}
+
+footer #redes {
+  display: inline;
+  text-align: center;
+  width: 37.5em;
+  margin: 0em 3em;
+}
+
+footer #redes img {
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  padding: 0.3em;
+  border-radius: 0.8em;
+  -webkit-border-radius: 0.8em;
+  -moz-border-radius: 0.8em;
+  -ms-border-radius: 0.8em;
+  -o-border-radius: 0.8em;
+}
+
+footer #redes p {
+  display: inline-block;
+}
+
+.grid {
+  width: 80em;
+  display: grid;
+  gap: 0.4em;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "header header header"
+    "album album album"
+    "aside1 historia1 historia2"
+    "formu formu formu";
+  margin: auto;
+}
+
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#contenedor_carga {
+  background-color: var(--hover);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  transition: all 3s ease;
+  -webkit-transition: all 3s ease;
+  -moz-transition: all 3s ease;
+  -ms-transition: all 3s ease;
+  -o-transition: all 3s ease;
+  z-index: 10000;
+}
+
+#carga {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: fit-content;
+  height: fit-content;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    {% block header %} {% endblock %}
+    <link rel="shortcut icon" href="{% static 'core/img/favicon/catfavicon.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <title>{% block title %}{% endblock%} Latte Cat Cafe</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}" >Inicio</a></li>
+                <li><a href="{% url 'tienda' %}">Tienda</a></li>
+                <li><a href="{% url 'adopta'%}">Adopción</a></li>
+                <li><a href="{% url 'reserva'%}">Reservación</a></li>
+                <li><a href="{% url 'contacto'%}"> Contacto </a></li>
+            </ul>
+        </nav>
+    </header>
+    {%block content%}{% endblock%}
+    
+    <footer>
+        <img id="imgFooter" src="{% static 'core/img/logo.jpeg' %}" alt="Imagen del logo del establecimiento">
+        <div id="nuestrosDatos">
+            <ul>
+                <li><a href="{% static 'core/pages/contacto.html' %}">Contacto</a></li>
+                <ul class="horarios">Horarios
+                    <li>Lunes a Viernes</li>
+                    <li>7:00 a 19:00</li>
+                    <li>Sabados y Domingos</li>
+                    <li>9:00 a 22:00</li>
+                </ul>
+                <li><a href="{% static 'core/Formularios/reglas.pdf' %}" target="_blank" rel="noopener">Reglas de convivencia</a></li>
+            </ul>
+        </div>
+        <div id="direccion">
+            <p>Dirección: Av. Cabildo 1905 (CABA)</p>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6570.230535121337!2d-58.42162128173575!3d-34.57594982407377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1698101801461!5m2!1ses-419!2sar"
+                width="140" height="100" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <button onclick="getLocation()">Dime donde estás y te digo como llegar</button>
+                <p id="demo"></p>
+        </div>
+        <div id="redes">
+            <a href="https://www.facebook.com/"><img src="{% static 'core/img/redes/facebook.jpg' %}"
+                    alt="Imagen del logo de Instagram"></a>
+            <a href="https://www.instagram.com/"><img src="{% static 'core/img/redes/instagram.jpg' %}"
+                    alt="Imagen del logo de Facebook"></a>
+            <a href="https://ar.linkedin.com/"><img src="{% static 'core/img/redes/linkedin.jpg' %}" alt="Imagen del logo de TikTok"></a>
+            <a href="https://web.whatsapp.com/"><img src="{% static 'core/img/redes/whatsapp.jpg' %}" alt="Imagen del logo de Twitter"></a>
+            <p>Nuestras Redes</p>
+        </div>
+    </footer>
+
+    <script>
+        window.onload = function () {
+            var contenedor = document.getElementById('contenedor_carga');
+            contenedor.style.visibility = 'hidden';
+            contenedor.style.opacity = '0';
+        }
+    </script>
+    <script src="{% static 'core/js/formulario.js' %}"></script>
+
+</body>
+
+</html>
