@@ -191,10 +191,6 @@ header ul li a:hover {
     height: 1em;
 }
   
-.grid .aside1::-webkit-scrollbar-track {
-    background: var(--subtitulos);
-}
-  
 .grid .aside1::-webkit-scrollbar-thumb {
     background-color: var(--hover); 
     border-radius: 2em;
@@ -419,4 +415,118 @@ footer #redes p {
     margin: auto;
     width: fit-content;
     height: fit-content;
+}
+
+
+/* Este es el estilo para tamaño celular */
+
+@media (max-width: 700px) {
+    body {
+        padding-top: 3em;
+    }
+
+    header {
+        height: fit-content;
+        font-size: 1em;
+    }
+
+    header ul li {
+        padding-bottom: 0.4em;
+    }
+
+    .grid .adopt {
+        grid-area: adopt;
+        background: var(--parrafos);
+        color: var(--fondo);
+        column-count: 1;
+        width: 98%;
+    }
+    
+    .grid .adopt h2 {
+        padding-left: 0.6em;
+        font-size: 2.5em;
+    }
+
+    .grid .conten p {
+        font-size: 1.2em;
+    }
+
+
+    .grid .aside1 h2 {
+        padding-top: 0.6em;
+        border-top: 0.05em var(--parrafos) solid;
+    }
+
+    .grid .aside1 p {
+        font-size: 1.5em;
+    }
+
+    .grid .aside1 h3 {
+        font-size: 1.2em;
+    }
+
+    .grid .info .titulo {
+        font-size: 2.0em;
+    }
+
+    .grid .info .dropdown {
+        font-size: 1.5em;
+    }
+
+    .grid .info .dropdown-content {
+        text-align: justify;
+    }
+
+    footer {
+        width: 100%;
+        display: grid;
+        gap: 0.4em;
+        grid-template-columns: repeat(2, 2fr);
+        grid-template-rows: repeat(2, auto);
+    }
+
+    footer #imgFooter {
+        width: fit-content;
+        height: 7.8em;
+        padding-left: 1em;
+        margin: 0em;
+    }
+
+    footer #nuestrosDatos {
+        width: fit-content;
+        font-size: 80%;
+    }
+
+    footer #direccion {
+        padding-left: 1em;
+        width: fit-content;
+
+    }
+
+    footer #redes {
+        width: fit-content;
+    }
+
+    footer #redes p {
+        font-size: 0.8em;
+    }
+
+    footer #redes img {
+        width: 1em;
+        height: 1em;
+    }
+
+    .grid {
+        text-align: center;
+        width: 100%;
+        display: grid;
+        gap: 0.4em;
+        grid-template-columns: 100%;
+        grid-template-areas: "header"
+            "adopt"
+            "album"
+            "aside1"
+            "formu";
+        margin: auto;
+    }
 }

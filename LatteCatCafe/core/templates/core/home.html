@@ -56,7 +56,7 @@
             <h3>Quienes somos</h3>
             <p>Somos un grupo de personas que se esfuerza en mimar a nuestros amigos felinos, y también encontrarles
                 una nueva familia.</p>
-            <p><a href="pages/reserva.html#somos' %}">Más infomación</a></p>
+            <p><a href="{% url 'reserva' %}">Más infomación</a></p>
         </article>
         <article>
             <img src="{% static 'core/img/indexInformacion/info2.jpg' %}"
@@ -64,7 +64,7 @@
             <h3>Preguntas Frecuentes</h3>
             <p>Si tienes alguna consulta no dudes en contactarnos, pero también puedes encontrar algunas consultas
                 que ya hemos respondido.</p>
-            <p><a href="{% static 'core/pages/contacto.html#preguntas' %}">Más infomación</a></p>
+            <p><a href="{% url 'contacto' %}">Más infomación</a></p>
         </article>
         <article>
             <img src="{% static 'core/img/indexInformacion/info3.jpeg' %}"
@@ -72,7 +72,7 @@
             <h3>¿Somos importantes?</h3>
             <p>Nosotros, desde nuestro pequeño espacio, ofrecemos a muchos beneficios. Y es por eso que queremos
                 invitarte a visitarnos. </p>
-            <p><a href="{% static 'core/pages/adopta.html#apopcion' %}">Más infomación</a></p>
+            <p><a href="{% url 'adopta' %}">Más infomación</a></p>
         </article>
     </section>
 </div>
