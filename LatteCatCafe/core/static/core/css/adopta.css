@@ -25,11 +25,11 @@ body {
 body::-webkit-scrollbar {
     width: 1em;
 }
-  
+
 body::-webkit-scrollbar-track {
     background: var(--subtitulos);
 }
-  
+
 body::-webkit-scrollbar-thumb {
     background-color: var(--hover); 
     border-radius: 2em;
@@ -73,7 +73,6 @@ header ul li a:hover {
     color: var(--subtitulos);
     background-color: var(--fondo);
 }
-
 
 .grid .header {
     grid-area: header;
@@ -190,7 +189,7 @@ header ul li a:hover {
 .grid .aside1::-webkit-scrollbar {
     height: 1em;
 }
-  
+
 .grid .aside1::-webkit-scrollbar-thumb {
     background-color: var(--hover); 
     border-radius: 2em;
@@ -208,13 +207,17 @@ header ul li a:hover {
     font-family: 'Comfortaa', cursive;
     display: inline;
     justify-self: center;
+    -webkit-border-radius: 0.625em;
+    -moz-border-radius: 0.625em;
+    -ms-border-radius: 0.625em;
+    -o-border-radius: 0.625em;
 }
 
 .grid .formu fieldset {
     width: fit-content;
 }
 
-.grid .formu h1 {
+.grid .formu h2 {
     color: var(--fondo);
     font-size: 2em;
     text-align: center;
@@ -417,6 +420,73 @@ footer #redes p {
     height: fit-content;
 }
 
+/* Este es el estilo para tamaño tableta */
+
+@media (max-width: 992px) and (min-width: 700px) {
+    header {
+        width: 100%;
+    }
+
+    header nav ul {
+        padding: 0em;
+    }
+
+    .grid .header {
+        width: 96%;
+    }
+    
+    .grid .header h1 {
+        font-size: 2.5em;
+    }
+    
+    .grid .adopt {
+        column-count: 2;
+        width: 96%;
+    }
+    
+    .grid .album {
+        width: 96%;
+    }
+
+    .grid .album p {
+        align-self: center;
+    }
+    
+    .grid .aside1 {
+        width: 100%;
+    }
+    
+    .grid .formu h2 {
+        font-size: 1.9em;
+    }
+    
+    .grid .formu legend {
+        font-size: 1.5em;
+    }
+
+    footer {
+        font-size: 1em;
+    }
+
+    footer #nuestrosDatos .horarios>li {
+        font-size: 0.9em;
+    }
+
+    footer #direccion {
+        width: 50em;
+        margin-left: 2em;
+    }
+
+    .grid {
+        width: 96%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "header header"
+        "adopt adopt"
+        "album album"
+        "aside1 formu"
+        "aside1 formu";
+    }
+}
 
 /* Este es el estilo para tamaño celular */
 
@@ -434,47 +504,45 @@ footer #redes p {
         padding-bottom: 0.4em;
     }
 
-    .grid .adopt {
-        grid-area: adopt;
-        background: var(--parrafos);
-        color: var(--fondo);
-        column-count: 1;
-        width: 98%;
+    .grid .header {
+        width: 96%;
     }
     
-    .grid .adopt h2 {
-        padding-left: 0.6em;
+    .grid .header h1 {
         font-size: 2.5em;
     }
+    
+    .grid .adopt {
+        column-count: 2;
+        width: 96%;
+    }
+    
+    .grid .album {
+        width: 96%;
+    }
 
-    .grid .conten p {
+    .grid .album p {
+        align-self: center;
+    }
+    
+    .grid .aside1 {
+        width: 100%;
+    }
+    
+    .grid .formu h2 {
+        font-size: 1.3em;
+    }
+    
+    .grid .formu legend {
         font-size: 1.2em;
     }
 
-
-    .grid .aside1 h2 {
-        padding-top: 0.6em;
-        border-top: 0.05em var(--parrafos) solid;
+    .grid .formu label {
+        font-size: 0.9em;
     }
 
-    .grid .aside1 p {
-        font-size: 1.5em;
-    }
-
-    .grid .aside1 h3 {
-        font-size: 1.2em;
-    }
-
-    .grid .info .titulo {
-        font-size: 2.0em;
-    }
-
-    .grid .info .dropdown {
-        font-size: 1.5em;
-    }
-
-    .grid .info .dropdown-content {
-        text-align: justify;
+    .grid .formu a {
+        font-size: 1em;
     }
 
     footer {
@@ -483,6 +551,7 @@ footer #redes p {
         gap: 0.4em;
         grid-template-columns: repeat(2, 2fr);
         grid-template-rows: repeat(2, auto);
+        justify-items: center;
     }
 
     footer #imgFooter {
@@ -500,15 +569,16 @@ footer #redes p {
     footer #direccion {
         padding-left: 1em;
         width: fit-content;
-
+        font-size: 80%;
     }
 
     footer #redes {
         width: fit-content;
+        margin: 0.2em;
     }
 
     footer #redes p {
-        font-size: 0.8em;
+        font-size: 80%;
     }
 
     footer #redes img {
@@ -517,16 +587,12 @@ footer #redes p {
     }
 
     .grid {
-        text-align: center;
         width: 100%;
-        display: grid;
-        gap: 0.4em;
-        grid-template-columns: 100%;
+        grid-template-columns: repeat(1, auto);
         grid-template-areas: "header"
-            "adopt"
-            "album"
-            "aside1"
-            "formu";
-        margin: auto;
+        "adopt"
+        "album"
+        "aside1"
+        "formu";
     }
 }
