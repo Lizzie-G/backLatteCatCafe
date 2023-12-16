@@ -25,11 +25,11 @@ body {
 body::-webkit-scrollbar {
     width: 1em;
 }
-  
+
 body::-webkit-scrollbar-track {
     background: var(--subtitulos);
 }
-  
+
 body::-webkit-scrollbar-thumb {
     background-color: var(--hover); 
     border-radius: 2em;
@@ -263,7 +263,7 @@ footer #redes p {
 
 /* Este es el estilo para tamaño tableta */
 
-@media (max-width: 992px) and (min-width: 600px) {
+@media (max-width: 992px) and (min-width: 700px) {
     header {
         width: 100%;
     }
@@ -272,52 +272,45 @@ footer #redes p {
         padding: 0em;
     }
 
-    .grid .conten {
+    .grid .header {
+        display: inline;
         width: 100%;
     }
-
-    .grid .conten ul {
-        grid-template-columns: repeat(3, 3fr);
-        grid-template-rows: repeat(3, auto);
+    
+    .grid .header img {
+        float: left;
+        padding-left: 5em;
+        padding-top: 1.3em;
+    }
+    
+    .grid .header h1 {
+        font-size: 2.5em;
+        width: fit-content;
+        float: right;
+        padding-top: 0.55em;
     }
 
-    .grid .conten ul .box1,
-    .box7 {
-        font-size: 1.1em;
+    .grid .aside1 {
+        width: 85%;
+        height: auto;
+    }
+
+    .grid .conten {
+        width: 80%;
+        grid-template-columns: repeat(3, auto);
+        justify-self: center;
     }
 
     .grid .info {
-        display: grid;
-        grid-template-columns: repeat(3, auto);
-        overflow-y: auto;
+        width: 96%;
     }
 
     .grid .info article {
-        width: 15em;
+        width: 50%;
     }
 
-    .grid .info article img {
-        width: fit-content;
-        height: 10em;
-    }
-
-    .grid .info article h3 {
-        color: var(--subtitulos);
-        font-family: 'Comfortaa', cursive;
-        margin: 0.4em 0em;
-    }
-
-    .grid .info article p {
-        padding-top: 6%;
-        padding-bottom: 3%;
-    }
-
-    .grid .info article a {
-        padding: 0.4em 5.1em;
-    }
-
-    .grid .info article a:hover {
-        padding: 0.4em 5.1em;
+    .grid .aside2 {
+        width: 100%;
     }
 
     footer {
@@ -337,9 +330,116 @@ footer #redes p {
         width: 96%;
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas: "header header"
-            "conten conten"
-            "aside1 aside1"
+            "aside1 conten"
+            "aside1 conten"
             "info info"
             "aside2 aside2";
+    }
+}
+
+/* Este es el estilo para tamaño celular */
+
+@media (max-width: 700px) {
+    body {
+        padding-top: 3em;
+    }
+
+    header {
+        height: fit-content;
+        font-size: 1em;
+    }
+
+    header ul li {
+        padding-bottom: 0.4em;
+    }
+    .grid .header {
+        display: inline;
+        width: 100%;
+    }
+    
+    .grid .header img {
+        float: left;
+        padding-left: 5em;
+        padding-top: 1.3em;
+    }
+    
+    .grid .header h1 {
+        font-size: 2.5em;
+        width: fit-content;
+        float: right;
+        padding-top: 0.55em;
+        padding-right: 0.5em;
+    }
+
+    .grid .aside1 {
+        width: 85%;
+        height: auto;
+    }
+
+    .grid .conten {
+        width: 80%;
+        grid-template-columns: repeat(2, auto);
+        justify-self: center;
+    }
+
+    .grid .info {
+        width: 96%;
+    }
+
+    .grid .info article {
+        width: 50%;
+    }
+
+    .grid .aside2 {
+        width: 100%;
+    }
+    footer {
+        width: 100%;
+        display: grid;
+        gap: 0.4em;
+        grid-template-columns: repeat(2, 2fr);
+        grid-template-rows: repeat(2, auto);
+        justify-items: center;
+    }
+
+    footer #imgFooter {
+        width: fit-content;
+        height: 7.8em;
+        padding-left: 1em;
+        margin: 0em;
+    }
+
+    footer #nuestrosDatos {
+        width: fit-content;
+        font-size: 80%;
+    }
+
+    footer #direccion {
+        padding-left: 1em;
+        width: fit-content;
+        font-size: 80%;
+    }
+
+    footer #redes {
+        width: fit-content;
+        margin: 0.2em;
+    }
+
+    footer #redes p {
+        font-size: 80%;
+    }
+
+    footer #redes img {
+        width: 1em;
+        height: 1em;
+    }
+
+    .grid {
+        width: 100%;
+        grid-template-columns: repeat(2, auto);
+        grid-template-areas: "header header"
+        "aside1 conten"
+        "aside1 conten"
+        "aside2 aside2";
     }
 }

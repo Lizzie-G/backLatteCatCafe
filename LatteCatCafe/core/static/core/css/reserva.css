@@ -99,7 +99,7 @@ header ul li a:hover {
   background: var(--parrafos);
   display: grid;
   justify-self: center;
-  grid-template-columns: repeat(auto-fit, minmax(18.75em, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(18.em, 1fr));
   width: 80em;
 }
 
@@ -175,13 +175,10 @@ header ul li a:hover {
   font-family: 'Comfortaa', cursive;
   display: inline;
   justify-self: center;
-<<<<<<< HEAD
-=======
 }
 
 .grid .formu fieldset {
   width: fit-content;
->>>>>>> 11baa3d7e758715f98dc631a2829887a3751cc50
 }
 
 .grid .formu h1 {
@@ -295,7 +292,7 @@ footer #nuestrosDatos ul li {
   display: block;
 }
 
-footer #nuestrosDatos .horarios>li {
+footer #nuestrosDatos .horarios > li {
   padding-left: 1.5em;
   font-size: 1em;
 }
@@ -374,4 +371,191 @@ footer #redes p {
   margin: auto;
   width: fit-content;
   height: fit-content;
+}
+
+/* Este es el estilo para tamaño tableta */
+
+@media (max-width: 992px) and (min-width: 700px) {
+  header {
+      width: 100%;
+  }
+
+  header nav ul {
+      padding: 0em;
+  }
+  
+  .grid .header h1 {
+    font-size: 2.5em;
+  }
+  
+  .grid .album {
+    width: 96%;
+  }
+  
+  .grid .album .box4 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  .grid .album .box5 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+  
+  .grid .aside1 {
+    width: 80%;
+    justify-self: center;
+  }
+
+  .grid .aside1 h2{
+    font-size: 1em;
+  }
+  
+  .grid .historia1,
+  .grid .historia2 {
+    width: 80%;
+    justify-self: center;
+  }
+  
+  .grid .historia1 p,
+  .grid .historia2 p {
+    font-size: 1.6em;
+  }
+
+  footer {
+      font-size: 1em;
+  }
+
+  footer #nuestrosDatos .horarios>li {
+      font-size: 0.9em;
+  }
+
+  footer #direccion {
+      width: 50em;
+      margin-left: 2em;
+  }
+
+  .grid {
+    width: 96%;
+    display: grid;
+    gap: 0.4em;
+    grid-template-areas: "header header"
+    "album album"
+    "aside1 historia1 historia2"
+    "formu formu";
+    margin: auto;
+  }
+}
+
+/* Este es el estilo para tamaño celular */
+
+@media (max-width: 700px) {
+  body {
+      padding-top: 3em;
+  }
+
+  header {
+      height: fit-content;
+      font-size: 1em;
+  }
+
+  header ul li {
+      padding-bottom: 0.4em;
+  }
+
+  .grid .header img {
+      width: 6em;
+      padding-left: 3em;
+  }
+
+  .grid .header h1 {
+      font-size: 1.8em;
+      color: var(--titulos);
+      width: 5.1em;
+  }
+
+  .grid .album p {
+    font-size: 1.2em;
+  }
+  
+  .grid .aside1 {
+    width: 80%;
+    justify-self: center;
+  }
+
+  .grid .aside1 h2{
+    font-size: 0.8em;
+  }
+  
+  .grid .historia1,
+  .grid .historia2 {
+    width: 80%;
+    height: 80%;
+    justify-self: center;
+  }
+
+  .grid .historia1 p, .grid .historia2 p {
+    font-size: 1.2em;
+  }
+
+  .grid .formu h1 {
+    font-size: 2em;
+  }
+
+  .grid .formu legend {
+    font-size: 1.2em;
+  }
+
+  .grid .formu label {
+    font-size: 0.9em;
+  }
+
+  footer {
+      width: 100%;
+      display: grid;
+      gap: 0.4em;
+      grid-template-columns: repeat(2, 2fr);
+      grid-template-rows: repeat(2, auto);
+      justify-items: center;
+  }
+
+  footer #imgFooter {
+      width: fit-content;
+      height: 7.8em;
+      padding-left: 1em;
+      margin: 0em;
+  }
+
+  footer #nuestrosDatos {
+      width: fit-content;
+      font-size: 80%;
+  }
+
+  footer #direccion {
+      padding-left: 1em;
+      width: fit-content;
+      font-size: 80%;
+  }
+
+  footer #redes {
+      width: fit-content;
+      margin: 0.2em;
+  }
+
+  footer #redes p {
+      font-size: 80%;
+  }
+
+  footer #redes img {
+      width: 1em;
+      height: 1em;
+  }
+
+  .grid {
+      width: 100%;
+  }
 }
